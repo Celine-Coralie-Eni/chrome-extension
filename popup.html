@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Proof-of-Work</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 10px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 2px;
+            word-break: break-all; 
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Proof-of-Work</h2>
+
+    <input type="text" id="challenge" placeholder="Challenge string">
+    <input type="number" id="difficulty" placeholder="Difficulty (e.g., 2)" min="1">
+    <button id="compute">Compute PoW</button>
+
+    <p id="progress">Progress: 0 attempts</p>
+    <p id="result"></p>
+
+    <h3>History</h3>
+    <table id="history">
+        <tr>
+            <th>Challenge</th>
+            <th>Nonce</th>
+            <th>Hash</th>
+            <th>Time</th>
+        </tr>
+    </table>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
